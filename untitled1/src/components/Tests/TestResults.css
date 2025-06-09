@@ -1,0 +1,256 @@
+.test-results {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.results-header h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.score-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.score-percentage {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.score-details {
+  text-align: left;
+}
+
+.score-message {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.score-points {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.answers-review {
+  margin-top: 3rem;
+}
+
+.answers-review h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.answer-item {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid;
+}
+
+.answer-item.correct {
+  border-left-color: #10b981;
+}
+
+.answer-item.incorrect {
+  border-left-color: #ef4444;
+}
+
+.question-info {
+  margin-bottom: 1rem;
+}
+
+.question-number {
+  display: inline-block;
+  background-color: #f1f5f9;
+  color: #64748b;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.question-text {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.answer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.user-answer,
+.correct-answer {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.user-answer strong,
+.correct-answer strong {
+  color: #64748b;
+  font-size: 0.9rem;
+  min-width: 120px;
+}
+
+.user-answer span {
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.correct-answer span {
+  color: #10b981;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.results-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.retake-button,
+.back-button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.retake-button {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.retake-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.back-button {
+  background-color: #64748b;
+  color: white;
+}
+
+.back-button:hover {
+  background-color: #475569;
+  transform: translateY(-1px);
+}
+
+.error-message {
+  background-color: #fef2f2;
+  color: #dc2626;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #fecaca;
+  text-align: center;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+  .test-results {
+    padding: 1rem;
+  }
+
+  .score-summary {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .score-details {
+    text-align: center;
+  }
+
+  .score-message {
+    font-size: 1.2rem;
+  }
+
+  .answer-item {
+    padding: 1rem;
+  }
+
+  .user-answer,
+  .correct-answer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .user-answer strong,
+  .correct-answer strong {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-actions {
+    flex-direction: column;
+  }
+
+  .retake-button,
+  .back-button {
+    width: 100%;
+  }
+
+  .score-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .score-percentage {
+    font-size: 2rem;
+  }
+} 

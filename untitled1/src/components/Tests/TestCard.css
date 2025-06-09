@@ -1,0 +1,86 @@
+.test-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.test-card:hover {
+  transform: translateY(-2px);
+}
+
+.test-title {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.test-description {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.test-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.test-score {
+  font-weight: 500;
+}
+
+.interpretation {
+  margin-top: 5px;
+  font-style: italic;
+  color: #666;
+}
+
+.test-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.start-button,
+.edit-button,
+.delete-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.start-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.start-button:hover {
+  background-color: #45a049;
+}
+
+.edit-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #1976D2;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+} 

@@ -1,0 +1,238 @@
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex: 1;
+  padding-top: 80px; /* Высота навбара + отступ */
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.feedback-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.feedback-page h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: clamp(24px, 4vw, 32px);
+}
+
+.feedback-form {
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 16px;
+}
+
+.feedback-form button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.feedback-form button:hover {
+  background-color: #2563eb;
+}
+
+.feedbacks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feedback-item {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.feedback-number {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.feedback-date {
+  color: #666;
+  font-size: 0.9em;
+  margin-left: auto;
+}
+
+.feedback-status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.status-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-resolved {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.feedback-message {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: #4a5568;
+  font-size: 16px;
+}
+
+.feedback-response {
+  background-color: #f8fafc;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+  border-left: 4px solid #3b82f6;
+}
+
+.feedback-response strong {
+  color: #2563eb;
+  margin-right: 5px;
+}
+
+.admin-controls {
+  margin-top: 15px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 15px;
+}
+
+.response-input-group {
+  margin-bottom: 15px;
+}
+
+.response-input-group textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 16px;
+}
+
+.save-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 16px;
+}
+
+.save-button:hover {
+  background-color: #2563eb;
+}
+
+.delete-button {
+  background-color: #ef4444;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 16px;
+}
+
+.delete-button:hover {
+  background-color: #dc2626;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.success-message {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+  .feedback-page {
+    padding: 15px;
+  }
+
+  .feedback-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .feedback-date {
+    margin-left: 0;
+  }
+
+  .feedback-item {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding-top: 60px;
+  }
+
+  .feedback-form textarea,
+  .response-input-group textarea {
+    min-height: 60px;
+  }
+
+  .feedback-form button,
+  .save-button,
+  .delete-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+} 

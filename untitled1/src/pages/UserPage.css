@@ -1,0 +1,181 @@
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex: 1;
+  padding-top: 80px; /* Высота навбара + отступ */
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.user-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.welcome-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.welcome-section h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: clamp(24px, 4vw, 32px);
+}
+
+.quote-widget {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-left: 4px solid #3b82f6;
+}
+
+.quote-widget p {
+  color: #4a5568;
+  font-size: clamp(16px, 3vw, 18px);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.mood-statistics {
+  background-color: white;
+  border-radius: 12px;
+  padding: clamp(15px, 3vw, 30px);
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mood-statistics h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: clamp(20px, 3.5vw, 28px);
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: clamp(10px, 2vw, 20px);
+  margin-top: 20px;
+}
+
+.mood-item {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: clamp(10px, 2vw, 15px);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.mood-item:hover {
+  transform: translateY(-2px);
+}
+
+.mood-name {
+  display: block;
+  color: #4a5568;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: clamp(14px, 2.5vw, 16px);
+}
+
+.mood-count {
+  display: block;
+  color: #2c3e50;
+  font-size: clamp(20px, 4vw, 24px);
+  font-weight: bold;
+}
+
+.diary-prompt {
+  background-color: white;
+  border-radius: 12px;
+  padding: clamp(20px, 3vw, 30px);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.diary-prompt:hover {
+  transform: translateY(-2px);
+}
+
+.diary-prompt h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: clamp(18px, 3vw, 24px);
+}
+
+.diary-prompt p {
+  color: #4a5568;
+  margin-bottom: 20px;
+  font-size: clamp(14px, 2.5vw, 16px);
+}
+
+.start-diary-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: clamp(8px, 2vw, 12px) clamp(16px, 3vw, 24px);
+  border-radius: 6px;
+  font-size: clamp(14px, 2.5vw, 16px);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.start-diary-button:hover {
+  background-color: #2563eb;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+  .user-page {
+    padding: 15px;
+  }
+
+  .welcome-section,
+  .mood-statistics,
+  .diary-prompt {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding-top: 60px;
+  }
+
+  .mood-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-section,
+  .mood-statistics,
+  .diary-prompt {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+} 

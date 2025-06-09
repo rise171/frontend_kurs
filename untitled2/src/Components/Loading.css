@@ -1,0 +1,32 @@
+.loading-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    z-index: 1000;
+    background-color: white;/* Добавит отступ между элементами */
+    width: 100%;
+    height: 100%;
+}
+
+.loading-image {
+    width: 250px;
+    height: 250px;
+    object-fit: contain; /* Чтобы изображение не деформировалось */
+}
+
+/* Стили для Loader из rsuite */
+.rs-loader {
+    font-size: 16px; /* Размер текста */
+}
+
+.rs-loader-spin {
+    width: 40px !important; /* Фиксированная ширина */
+    height: 40px !important; /* Фиксированная высота */
+}
+
+.rs-loader-content {
+    margin-top: 10px; /* Отступ текста от спиннера */
+}

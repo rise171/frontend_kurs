@@ -1,0 +1,55 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  margin-top: 64px; /* Высота навигационной панели */
+  padding: 2rem;
+  background-color: #f8fafc;
+  min-height: calc(100vh - 64px);
+}
+
+.main-content.no-navbar {
+  margin-top: 0;
+  min-height: 100vh;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .main-content.no-navbar {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    margin-bottom: 60px;
+  }
+}
+
+.welcome-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.welcome-container h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.welcome-container p {
+  color: #666;
+  font-size: 1.1rem;
+} 
